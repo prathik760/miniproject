@@ -1,0 +1,136 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+}
+
+html, body {
+    height: 100%;
+    background-image: url(./bg.png);
+    background-size: cover;  
+    background-position: top center; 
+    background-attachment: fixed;
+}
+
+/* Button container */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.search {
+    margin-top: 20px;
+}
+
+ 
+button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    width: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(145, 150, 148);
+}
+
+ 
+.data, .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    padding: 20px;
+    justify-content: center;
+}
+
+ 
+.items, .category-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(218, 210, 210, 0.1);
+    transition: transform 0.2s;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.items:hover, .category-item:hover {
+    transform: scale(1.03);
+}
+
+/* Image styling */
+.items img, .category-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Text styling */
+.items p, .category-item p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+    color: #f0f6ec;
+}
+
+/* Title styling */
+.items .meal-name, .category-item .category-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* Ingredients and tag styling */
+.items .ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 8px;
+    border-top: 1px solid #ddd;
+}
+
+.items .tag {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* .items .youtube-link {
+    font-size: 0.85rem;
+    color: #007acc;
+    text-decoration: none;
+    margin-top: 8px;
+    display: inline-block;
+} */
+
+/* .items .youtube-link:hover {
+    text-decoration: underline;
+} */
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+    .items, .category-item {
+        width: 45%; /* For medium screens, two items per row */
+    }
+}
+
+@media (min-width: 900px) {
+    .items, .category-item {
+        width: 30%; /* For larger screens, three items per row */
+    }
+}
+
+@media (min-width: 1200px) {
+    .items, .category-item {
+        width: 22%; /* For extra-large screens, four items per row */
+    }
+}
